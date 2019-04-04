@@ -39,6 +39,7 @@ nav a{
     display: block;
     text-decoration: none;
     padding: 15px;
+    font-size: 18px;
     color: #727272;
     text-transform: uppercase;
     transition: all 0.3s;
@@ -173,7 +174,7 @@ nav a:hover{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .widgetBoxes div{
@@ -397,6 +398,7 @@ footer .datePost{
     height: 40px;
     line-height: 40px;
     color: #727272;
+    padding-left: 20px;
     margin-top: 30px;
 }
 .footerCopy b{
@@ -421,7 +423,7 @@ footer .tweets{
     background-color: #0079c7;
 }
 
-@media (max-width:660px){
+@media (min-width:320px) and (max-width:720px){
     #banner{
         height: auto;
     }
@@ -450,9 +452,6 @@ footer .tweets{
     #geral aside{
         padding: 20px;
     }
-    .widgetBoxes{
-        justify-content: space-evenly;
-    }
 
     .footerMenu{
         flex-direction: column;
@@ -462,7 +461,8 @@ footer .tweets{
         padding: 20px;
     }
     .footerCopy{
-        padding-left: 20px;
+        padding-left: 0;
+        text-align: center;
     }
 
     header .container{
@@ -493,3 +493,20 @@ footer .tweets{
         justify-content: space-around;
     }
 }
+
+@media (max-width:360px){
+    #geral section,
+    #geral aside,
+    .bannerHeadLine{
+        padding: 0 !important;
+    }
+
+    .footerCopy{
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .footerArea{
+        padding: 20px;
+    }
+}   
